@@ -9,6 +9,7 @@ Support for browser and server.
 
 ## Install
 `npm install token-fetch`
+
 `npm install token-fetch-browser`
 
 ## Import
@@ -32,6 +33,7 @@ tezosTokenFetcher.fetchTokens(TOKEN_QUERY)
     .catch(console.error);
 ```
 [TOKEN_QUERY](https://nofungible.github.io/token-fetch-js/global.html#tokenQuery)
+
 [TOKEN_METADATA](https://nofungible.github.io/token-fetch-js/global.html#tokenMetadata)
 
 # Contribute
