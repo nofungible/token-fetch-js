@@ -1,5 +1,7 @@
 # TokenFetchJS
-Easily fetch tokens from popular token indexers. Currently supports Tezos, but it is designed in a chain agnostic way. If you've got indexers for a chain we can add them!
+Easily fetch tokens from popular token indexers.
+
+Currently supports Tezos, but it is designed in a chain agnostic way. If you've got indexers for a chain we can add them!
 
 Support for browser and server.
 
