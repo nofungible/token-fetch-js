@@ -3,7 +3,7 @@ Easily fetch tokens from popular token indexers. Currently supports Tezos, but i
 
 Support for browser and server.
 
-[INSTALL](#user-content-install) [IMPORT](#user-content-import) [USE](#user-content-use) [CONTRIBUTE](#user-content-contribute) [DOCS](https://nofungible.github.io/token-fetch-js/module-TokenFetchJS.html)
+[INSTALL](#user-content-install) | [IMPORT](#user-content-import) | [USE](#user-content-use) | [CONTRIBUTE](#user-content-contribute) | [DOCS](https://nofungible.github.io/token-fetch-js/module-TokenFetchJS.html)
 
 # Quick Use
 
