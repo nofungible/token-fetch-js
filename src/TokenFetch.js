@@ -7,7 +7,7 @@ class TokenFetch {
 
     /**
      * TokenFetch requires a set of providers to fetch tokens from. Generally speaking,
-     * this will be a set of indexers. You can access built-in providers to utilze via
+     * this will be a set of indexers. You can access built-in providers to utilize via
      * {@link module:TokenFetchJS.providers}.
      * @param {Array} providerSet A set of token providers to fetch tokens from.
      */
