@@ -2,8 +2,8 @@
 Easily fetch tokens from popular token indexers. Currently supports Tezos, but it is designed in a chain agnostic way. If you've got indexers for a chain we can add them!
 
 Support for browser and server.
-Powered by [axios](https://github.com/axios/axios)
-[DOCS]()
+
+[INSTALL](#user-content-install) [IMPORT](#user-content-import) [USE](#user-content-use) [CONTRIBUTE](#user-content-contribute) [DOCS](https://nofungible.github.io/token-fetch-js/module-TokenFetchJS.html)
 
 # Quick Use
 
@@ -27,10 +27,12 @@ const {TokenFetch, providers: {Tezos}} = window.TokenFetchJS;
 ```
 const tezosTokenFetcher = new TokenFetch(Tezos);
 
-tezosTokenFetcher.fetchTokens(QUERY_OBJECT).then((TOKEN_METADATA_SET) => /* doStuff() */).catch(console.error);
+tezosTokenFetcher.fetchTokens(TOKEN_QUERY)
+    .then(([TOKEN_METADATA, ...]) => /* doStuff() */)
+    .catch(console.error);
 ```
-[QUERY_OBJECT]()
-[TOKEN_METADATA_SET]()
+[TOKEN_QUERY](https://nofungible.github.io/token-fetch-js/global.html#tokenQuery)
+[TOKEN_METADATA](https://nofungible.github.io/token-fetch-js/global.html#tokenMetadata)
 
 # Contribute
 - Clone
