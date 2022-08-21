@@ -1,14 +1,19 @@
 {
-  "name": "token-fetch",
-  "version": "1.0.0",
+  "name": "token-fetch-js",
+  "version": "0.1.0-dev",
   "description": "",
   "main": "index.js",
   "scripts": {
     "jsdoc": "./node_modules/.bin/jsdoc ./src/ -d ./doc",
     "prettier": "./node_modules/.bin/prettier --write ./src",
+    "pre-rollup": "rm -rf ./output && mkdir ./output && cp ./output.package.json ./output/package.json",
     "rollup": "npm run rollup-node",
-    "rollup-node": "./node_modules/.bin/rollup --config",
-    "rollup-browser": "./node_modules/.bin/rollup --config --environment BROWSER_EXPORT"
+    "rollup-dist": "npm run rollup-node-dist",
+    "rollup-node": "npm run pre-rollup && ./node_modules/.bin/rollup -m --config",
+    "rollup-node-dist": "npm run pre-rollup && ./node_modules/.bin/rollup --config",
+    "rollup-browser": "npm run pre-rollup && ./node_modules/.bin/rollup -m --config --environment BROWSER_EXPORT && npm run uglify",
+    "rollup-browser-dist": "npm run pre-rollup && ./node_modules/.bin/rollup --config --environment BROWSER_EXPORT && npm run uglify",
+    "uglify": "./node_modules/.bin/uglifyjs --compress --mangle -o ./output/index.js -- ./output/index.js"
   },
   "author": "nofungible",
   "license": "MIT",
@@ -19,7 +24,8 @@
     "eslint": "8.22.0",
     "jsdoc": "3.6.11",
     "prettier": "2.7.1",
-    "rollup": "2.77.3"
+    "rollup": "2.77.3",
+    "uglify-js": "3.17.0"
   },
   "dependencies": {
     "axios": "0.27.2"

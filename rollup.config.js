@@ -7,8 +7,7 @@ export default {
   output: {
     dir: 'output',
     format: 'umd',
-    name: 'TokenFetchJS',
-    sourcemap: true
+    name: 'TokenFetchJS'
   },
   plugins: [
     json(),
