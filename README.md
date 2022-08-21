@@ -15,7 +15,7 @@ Support for browser and server.
 ## Import
 ```
 // import/export
-import {TokenFetch, providers: {Tezos}} from token-fetch;
+import {TokenFetch, providers: {Tezos}} from 'token-fetch';
 
 // CommonJS
 const {TokenFetch, providers: {Tezos}} = require('token-fetch');
