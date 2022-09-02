@@ -1,4 +1,4 @@
-import Tezos from "./tezos";
+import Tezos from "./Tezos";
 
 export default {
     Tezos,

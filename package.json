@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "jsdoc": "./node_modules/.bin/jsdoc ./src/ -d ./doc",
+    "jsdoc": "./node_modules/.bin/jsdoc -c ./doc/conf.json",
     "prettier": "./node_modules/.bin/prettier --write ./src",
     "pre-rollup": "rm -rf ./output && mkdir ./output && cp ./output.package.json ./output/package.json",
     "rollup": "npm run rollup-node",

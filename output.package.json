@@ -1,0 +1,9 @@
+{
+  "name": "token-fetch",
+  "version": "0.1.0-dev",
+  "description": "Easily fetch tokens from popular token indexers.",
+  "main": "index.js",
+  "author": "nofungible",
+  "license": "MIT",
+  "repository": "https://github.com/nofungible/token-fetch-js"
+}

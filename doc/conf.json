@@ -1,0 +1,16 @@
+{
+    "source": {
+        "include": ["./src", "./doc"]
+    },
+    "opts": {
+        "destination": "./docs/",
+        "readme": "./doc/README.md",
+        "recurse": true,
+        "tutorials": "./doc/guide"
+    },
+    "templates": {
+        "default": {
+            "outputSourceFiles": false
+        }
+    }
+}

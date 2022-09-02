@@ -15,18 +15,18 @@ Support for browser and server.
 ## Import
 ```
 // import/export
-import {TokenFetch, providers: {Tezos}} from token-fetch-js;
+import {TokenFetcher, providers: {Tezos}} from token-fetch-js;
 
 // CommonJS
-const {TokenFetch, providers: {Tezos}} = require('token-fetch-js');
+const {TokenFetcher, providers: {Tezos}} = require('token-fetch-js');
 
 // Browser
-const {TokenFetch, providers: {Tezos}} = window.TokenFetchJS;
+const {TokenFetcher, providers: {Tezos}} = window.TokenFetchJS;
 ```
 
 ## Use
 ```
-const tezosTokenFetcher = new TokenFetch(Tezos);
+const tezosTokenFetcher = new TokenFetcher(Tezos);
 
 tezosTokenFetcher.fetchTokens(TOKEN_QUERY)
     .then(([TOKEN_METADATA, ...]) => /* doStuff() */)
