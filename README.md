@@ -6,36 +6,37 @@ Easily fetch tokens from popular token indexers.
 
 Currently supports Tezos, but it is designed in a chain agnostic way. If you've got indexers for a chain we can add them!
 
-Support for browser and server.
+Works in browser and server.
 
 ## Install
 `npm install token-fetch`
-
 `npm install token-fetch-browser`
 
 ## Import
 ```
 // import/export
-import {TokenFetch, providers: {Tezos}} from 'token-fetch';
+import {factory, providers: {Tezos}} from 'token-fetch';
 
 // CommonJS
-const {TokenFetch, providers: {Tezos}} = require('token-fetch');
+const {factory, providers: {Tezos}} = require('token-fetch');
 
 // Browser
-const {TokenFetcher, providers: {Tezos}} = window.TokenFetchJS;
+const {factory, providers: {Tezos}} = window.TokenFetchJS;
 ```
 
 ## Use
 ```
-const tezosTokenFetcher = new TokenFetcher(Tezos);
+const TeiaIndexer = new Tezos.TeiaRocks('teia-indexer');
+const FxhashIndexer = new Tezos.FxhashNative('fxhash-indexer');
+const tezosFetcher = factory([TeiaIndexer, FxhashIndexer]);
 
-tezosTokenFetcher.fetchTokens(TOKEN_QUERY)
-    .then(([TOKEN_METADATA, ...]) => /* doStuff() */)
-    .catch(console.error);
+const {
+    tokens, // Set of token metadata
+    cursor // Sequential pagination cursor
+} = await tezosTokenFetcher.fetchTokens(TOKEN_QUERY);
 ```
-[TOKEN_QUERY](https://nofungible.github.io/token-fetch-js/global.html#tokenQuery)
-
-[TOKEN_METADATA](https://nofungible.github.io/token-fetch-js/global.html#tokenMetadata)
+[Token query schema](https://nofungible.github.io/token-fetch-js/global.html#tokenQuery)
+[Token metadata schema](https://nofungible.github.io/token-fetch-js/global.html#tokenMetadata)
 
 # Contribute
 - Clone
