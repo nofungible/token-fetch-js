@@ -30,6 +30,8 @@ class TokenFetcher {
      * If no {@link tokenQuery} is given the most recent 50 tokens will be returned.
      * @param {Object} pageCursor Metadata required by TokenFetchJS to gather the next page of results.
      * @returns {Object} See {@link tokenFetchResponse}.
+     * @see {@link tokenQuery}
+     * @see {@link pageCursor}
      */
     async fetchTokens(rawTokenQuery = {}, pageCursor) {
         const tokenQuery = this.queryParser.normalizeTokenQuery(
