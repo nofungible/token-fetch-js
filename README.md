@@ -1,3 +1,4 @@
+THIS PROJECT IS A WORK IN PROGRESS
 # TokenFetchJS
 [INSTALL](#user-content-install) | [IMPORT](#user-content-import) | [USE](#user-content-use) | [CONTRIBUTE](#user-content-contribute) | [DOCS](https://nofungible.github.io/token-fetch-js/module-TokenFetchJS.html)
 
@@ -15,10 +16,10 @@ Support for browser and server.
 ## Import
 ```
 // import/export
-import {TokenFetcher, providers: {Tezos}} from token-fetch-js;
+import {TokenFetch, providers: {Tezos}} from 'token-fetch';
 
 // CommonJS
-const {TokenFetcher, providers: {Tezos}} = require('token-fetch-js');
+const {TokenFetch, providers: {Tezos}} = require('token-fetch');
 
 // Browser
 const {TokenFetcher, providers: {Tezos}} = window.TokenFetchJS;
