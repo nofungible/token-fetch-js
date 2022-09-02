@@ -5,12 +5,11 @@ const V1_CONTRACT = "KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE";
 const V2_CONTRACT = "KT1U6EHmNxJTkvaWJ4ThczG4FSDaHC21ssvi";
 
 /**
- * Native fx(hash) indexer. Lacks many expected query operators since it was built specifically for fx(hash).
- * Simple things like gathering feeds, or user collections, is fine. For more complex querying
- * use {@link TezosProviders.TezTok}, or {@link TezosProviders.ObjktcomNative}.
+ * Native fx(hash) indexer. Lacks support for many selectors. Review {@tutorial FxhashNative_Selector_Compatibility} for more information.
  * @implements TokenProvider
  * @memberof TezosProviders
  */
+
 class FxhashNative extends GraphQLProvider {
     /**
      * @param {String} key Unique {@link TokenProvider} class instance identifier.
@@ -19,17 +18,28 @@ class FxhashNative extends GraphQLProvider {
         super(key, [V1_CONTRACT, V2_CONTRACT], "https://api.fxhash.xyz/graphql");
     }
 
+    mimeType = "application/x-directory"; // move to config and use in multi indexers too
     platformName = "fx(hash)"; // move to constants map of contract > display name
     platformUrl = "https://www.fxhash.xyz"; // move to constants/config file contract > site map same for display name
     v1Contract = V1_CONTRACT;
     v2Contract = V2_CONTRACT;
 
-    // tid = if owner any else none
-    // issuer = $eq, $in
-    // mimeType = N/A
-    // owner = $eq | $neq
+    async fetchTokens(tokenQuery) {
+        const { mimeType: mimeTypeQueryPartial } = tokenQuery;
 
-    fetchTokens(tokenQuery) {
+        if (mimeTypeQueryPartial) {
+            const { $eq, $neq, $in } = mimeTypeQueryPartial;
+
+            if (
+                ($eq && $eq !== this.mimeType) ||
+                ($in && !$in.includes(this.mimeType)) ||
+                ($nin && $nin.includes(this.mimeType)) ||
+                ($neq && $neq === this.mimeType)
+            ) {
+                return [];
+            }
+        }
+
         if (tokenQuery.owner) {
             if (tokenQuery.tid) {
                 return this.fetchOwnerTokensByTID(tokenQuery);

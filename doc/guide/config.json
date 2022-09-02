@@ -1,0 +1,9 @@
+{
+    "Tezos": {
+        "children": {
+            "FxhashNative_Selector_Compatibility": {
+                "title": "Tezos.FxhashNative Selectors"
+            }
+        }
+    }
+}

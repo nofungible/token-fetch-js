@@ -3,13 +3,14 @@ import { parseTID } from "../../../lib/util";
 
 /**
  * {@link TokenProvider} class designed to interface with any HTTP reachable TezTok indexer.
- * You must provide your own TezTok API host.
+ * You must provide your own TezTok API host. Public instance: `https://api.teztok.com/v1/graphql`.
  * @implements TokenProvider
  * @memberof TezosProviders
  */
 class TezTok extends GraphQLProvider {
     /**
      * @param {String} key Unique TokenProvider instance identifier.
+     * @param {String} teztokHost URL for indexer API.
      * @param {Object} multiProviderOptions See {@link multiProviderOptions}.
      */
     constructor(providerKey, tezTokHost, options = {}) {
