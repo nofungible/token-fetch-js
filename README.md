@@ -41,6 +41,7 @@ const {
 } = await tezosTokenFetcher.fetchTokens(TOKEN_QUERY, pageTwoCursor);
 ```
 [Token query schema](https://nofungible.github.io/token-fetch-js/global.html#tokenQuery)
+
 [Token metadata schema](https://nofungible.github.io/token-fetch-js/global.html#tokenMetadata)
 
 # Contribute
