@@ -33,12 +33,12 @@ const tezosFetcher = factory([TeiaIndexer, FxhashIndexer]);
 const {
     tokens: pageOneTokens, // Set of token metadata
     cursor: pageTwoCursor // Sequential pagination cursor
-} = await tezosTokenFetcher.fetchTokens(TOKEN_QUERY);
+} = await tezosFetcher.fetchTokens(TOKEN_QUERY);
 
 const {
     tokens: pageTwoTokens,
     cursor: pageThreeCursor
-} = await tezosTokenFetcher.fetchTokens(TOKEN_QUERY, pageTwoCursor);
+} = await tezosFetcher.fetchTokens(TOKEN_QUERY, pageTwoCursor);
 ```
 [Token query schema](https://nofungible.github.io/token-fetch-js/global.html#tokenQuery)
 
