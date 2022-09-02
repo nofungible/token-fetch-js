@@ -178,4 +178,3 @@ class TeiaRocks extends GraphQLProvider {
 }
 
 export default TeiaRocks;
-
