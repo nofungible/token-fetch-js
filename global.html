@@ -102,13 +102,745 @@
 
         
                 
+<h4 class="name" id="multiProviderOptions">multiProviderOptions</h4>
+
+
+
+
+<div class="description">
+    Dictionary of options specific to <a href="TokenProvider.html">TokenProvider</a> classes representing many smart contract addresses.
+</div>
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>contract</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Dictionary of contract scoping options
+                <h6>Properties</h6>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>allow</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Set of supported smart contract addresses.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>deny</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Set of smart contract addresses to omit from query results.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="pageCursor">pageCursor</h4>
+
+
+
+
+<div class="description">
+    Pagination metadata used to gather tokens for the subsequent page given a specific <a href="global.html#tokenQuery">tokenQuery</a>.
+This should be passed back to TokenFetch#fetchTokens for the next page of tokens for the given query.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="selectorQuery">selectorQuery</h4>
+
+
+
+
+<div class="description">
+    Query partial used to constrain token results via field comparison.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>$eq</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Property value is equal to the comparison value.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>$neq</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Property value is not equal to the comparison value.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>$in</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Property value is included in comparison value set.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>$nin</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Property value is not included in comparison value set.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="sortQuery">sortQuery</h4>
+
+
+
+
+<div class="description">
+    Query partial used to sort token results. Possible sort values are 'ASC' and 'DESC'.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>date</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Sort value used to sort tokens by date minted.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="tokenFetchResponse">tokenFetchResponse</h4>
+
+
+
+
+<div class="description">
+    Dictionary returned by TokenFetcher.fetchTokens.
+</div>
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tokens</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Set of <a href="global.html#tokenMetadata">tokenMetadata</a>.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cursor</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Call <a href="TokenFetcher.html#fetchTokens">TokenFetcher#fetchTokens</a> with the same <a href="global.html#tokenQuery">tokenQuery</a>, and a <a href="global.html#pageCursor">pageCursor</a>
+as a second argument, to get the next page of results.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
 <h4 class="name" id="tokenMetadata">tokenMetadata</h4>
 
 
 
 
 <div class="description">
-    Normalized token metadata object. Represents a single token. @TODO clean up IPFS addresses. Add raw IPFS hash.
+    Normalized token metadata.
 </div>
 
 
@@ -159,7 +891,7 @@
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">Object</span>
 
 
             
@@ -169,14 +901,32 @@
 
             
 
-            <td class="description last">Address of the originating smart contract.</td>
-        </tr>
+            <td class="description last">Token's smart contract metadata.
+                <h6>Properties</h6>
 
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
     
 
         <tr>
             
-                <td class="name"><code>createdAt</code></td>
+                <td class="name"><code>address</code></td>
             
 
             <td class="type">
@@ -192,7 +942,60 @@
 
             
 
-            <td class="description last">Date the token was created. @TODO normalize in providers.</td>
+            <td class="description last">Smart contract address.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>tokenId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Smart contract identifier assigned to the token.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>createdAt</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Token's mint date.</td>
         </tr>
 
     
@@ -215,14 +1018,55 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last">Token description.</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>identifier</code></td>
+                <td class="name"><code>ipfs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">IPFS metadata.
+                <h6>Properties</h6>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>artifact</code></td>
             
 
             <td class="type">
@@ -238,14 +1082,14 @@
 
             
 
-            <td class="description last">Provider specific identifier. Generally, this will be the issue number derived from the originating smart contract. @TODO coerce to string in providers.</td>
+            <td class="description last">IPFS address of the token's artifact.</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>ipfsLink</code></td>
+                <td class="name"><code>display</code></td>
             
 
             <td class="type">
@@ -261,30 +1105,14 @@
 
             
 
-            <td class="description last">Native IPFS address of the token artifact.</td>
+            <td class="description last">IPFS address of the token's display image.</td>
         </tr>
 
     
+    </tbody>
+</table>
 
-        <tr>
-            
-                <td class="name"><code>displayArtifactIpfsAddress</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
             </td>
-
-            
-
-            
-
-            <td class="description last">Native IPFS address of the display artifact.</td>
         </tr>
 
     
@@ -348,76 +1176,7 @@
 
             
 
-            <td class="description last">Wallet address of the token creator.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>handle</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Platform derived handle of the token creator.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>platform</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Platform the token was issued on.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>platformDisplay</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Display name of the platform the token was issued on.</td>
+            <td class="description last">Wallet address of the token issuer.</td>
         </tr>
 
     
@@ -425,6 +1184,29 @@
 </table>
 
             </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>mimeType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Token file mime type.</td>
         </tr>
 
     
@@ -447,99 +1229,12 @@
 
             
 
-            <td class="description last">The name of the token.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>platformUri</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">URL for the token's platform listing.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>platformIssuerUrl</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">URL for the token creator's platform profile.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>type</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Virtual attribute - the type of the token. Enum includes [image, video, model, application].</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>mime</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Mime type of the token.</td>
+            <td class="description last">Token name.
+{Object} platform Platform metadata.
+{String} platform.name Name of the platform the token was minted on.
+{String} platform.url URL of the platform the token was minted on.
+{Object} platform.issuer Platform derived metadata for the issuer.
+{String} platform.issuer.url URL of the issuer's platform specific page.</td>
         </tr>
 
     
@@ -562,7 +1257,78 @@
 
             
 
-            <td class="description last">Virtual attribute - the combined contract + identifer value. Used as a single identifier value.</td>
+            <td class="description last">The unified token identifier (TID). Generally this is in the format "contract:contract_token_id".</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_metadata</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Additional TokenFetchJS metadata.
+                <h6>Properties</h6>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>providerKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The provider that the token was gathered from.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
         </tr>
 
     
@@ -599,11 +1365,6 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="TokenFetch.js.html">TokenFetch.js</a>, <a href="TokenFetch.js.html#line30">line 30</a>
-    </li></ul></dd>
-    
 
     
 
@@ -625,7 +1386,7 @@
 
 
 <div class="description">
-    Query object used to refine token fetch results.
+    Query dictionary used to refine token fetch results.
 </div>
 
 
@@ -678,7 +1439,7 @@
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">Date</span>
 
 
             
@@ -709,7 +1470,7 @@
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">Date</span>
 
 
             
@@ -734,45 +1495,13 @@
 
         <tr>
             
-                <td class="name"><code>idList</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Token ID constraint for token fetch. IDs are contract specific.
-Multi-contract providers are expected to manage contract-id relationships.</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>issuer</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">Object</span>
 
 
             
@@ -790,7 +1519,7 @@ Multi-contract providers are expected to manage contract-id relationships.</td>
 
             
 
-            <td class="description last">Wallet address constraint for token creator.</td>
+            <td class="description last">Token creator address <a href="global.html#selectorQuery">selectorQuery</a>.</td>
         </tr>
 
     
@@ -828,13 +1557,13 @@ Multi-contract providers are expected to manage contract-id relationships.</td>
 
         <tr>
             
-                <td class="name"><code>owner</code></td>
+                <td class="name"><code>mimeType</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">Object</span>
 
 
             
@@ -852,20 +1581,20 @@ Multi-contract providers are expected to manage contract-id relationships.</td>
 
             
 
-            <td class="description last">Wallet address constraint for token owner.</td>
+            <td class="description last">File mime-type <a href="global.html#selectorQuery">selectorQuery</a>.</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>skip</code></td>
+                <td class="name"><code>orderBy</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">Object</span>
 
 
             
@@ -883,7 +1612,69 @@ Multi-contract providers are expected to manage contract-id relationships.</td>
 
             
 
-            <td class="description last">Number of results to skip. Defualt is 0.</td>
+            <td class="description last">Token sort order options <a href="global.html#sortQuery">sortQuery</a></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>owner</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Token holder address <a href="global.html#selectorQuery">selectorQuery</a>.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>tid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Unified Token Identifier (TID) <a href="global.html#selectorQuery">selectorQuery</a>.</td>
         </tr>
 
     
@@ -920,11 +1711,6 @@ Multi-contract providers are expected to manage contract-id relationships.</td>
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="TokenFetch.js.html">TokenFetch.js</a>, <a href="TokenFetch.js.html#line18">line 18</a>
-    </li></ul></dd>
-    
 
     
 
@@ -952,13 +1738,13 @@ Multi-contract providers are expected to manage contract-id relationships.</td>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-TokenFetchJS.html">TokenFetchJS</a></li></ul><h3>Classes</h3><ul><li><a href="TokenFetch.html">TokenFetch</a></li></ul><h3><a href="global.html">Global</a></h3>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-TokenFetchJS.html">TokenFetchJS</a></li></ul><h3>Namespaces</h3><ul><li><a href="TezosProviders.html">TezosProviders</a></li></ul><h3>Classes</h3><ul><li><a href="TezosProviders.FxhashNative.html">FxhashNative</a></li><li><a href="TezosProviders.ObjktcomNative.html">ObjktcomNative</a></li><li><a href="TezosProviders.TeiaRocks.html">TeiaRocks</a></li><li><a href="TezosProviders.TezTok.html">TezTok</a></li><li><a href="TokenFetcher.html">TokenFetcher</a></li></ul><h3>Interfaces</h3><ul><li><a href="TokenProvider.html">TokenProvider</a></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-FxhashNative_Selector_Compatibility.html">Tezos.FxhashNative Selectors</a></li></ul><h3><a href="global.html">Global</a></h3>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Sat Aug 20 2022 14:25:24 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Fri Sep 02 2022 11:14:52 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

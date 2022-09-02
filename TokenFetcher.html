@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: TokenFetch</title>
+    <title>JSDoc: Class: TokenFetcher</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: TokenFetch</h1>
+    <h1 class="page-title">Class: TokenFetcher</h1>
 
     
 
@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>TokenFetch<span class="signature">(providerSet, TokenQueryParser, TokenPaginator)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>TokenFetcher</h2>
         
             <div class="class-description">Provide a set of token providers and fetch normalized token data
 using a simple query interface.</div>
@@ -41,23 +41,6 @@ using a simple query interface.</div>
     
         
 
-    
-    <h2>Constructor</h2>
-    
-
-    
-    <h4 class="name" id="TokenFetch"><span class="type-signature"></span>new TokenFetch<span class="signature">(providerSet, TokenQueryParser, TokenPaginator)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    TokenFetch requires a set of providers to fetch tokens from. Generally speaking,
-this will be a set of indexers. You can access built-in providers to utilize via
-<a href="module-TokenFetchJS.html#.providers">module:TokenFetchJS.providers</a>.
-</div>
 
 
 
@@ -66,100 +49,6 @@ this will be a set of indexers. You can access built-in providers to utilize via
 
 
 
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>providerSet</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">A set of token providers to fetch tokens from.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>TokenQueryParser</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">TokenQueryParser class</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>TokenPaginator</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">TokenPaginator class</td>
-        </tr>
-
-    
-    </tbody>
-</table>
 
 
 
@@ -527,13 +416,6 @@ If no <a href="global.html#tokenQuery">tokenQuery</a> is given the most recent 5
     
 
     
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="global.html#tokenQuery">tokenQuery</a></li>
-        </ul>
-    </dd>
-    
 
     
 </dl>
@@ -556,7 +438,7 @@ If no <a href="global.html#tokenQuery">tokenQuery</a> is given the most recent 5
 
         
 <div class="param-desc">
-    Dictionary including token metadata and <a href="global.html#pageCursor">pageCursor</a>.
+    See <a href="global.html#tokenFetchResponse">tokenFetchResponse</a>.
 </div>
 
 
@@ -1008,13 +890,13 @@ If no <a href="global.html#tokenQuery">tokenQuery</a> is given the most recent 5
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-TokenFetchJS.html">TokenFetchJS</a></li></ul><h3>Namespaces</h3><ul><li><a href="Tezos.html">Tezos</a></li></ul><h3>Classes</h3><ul><li><a href="Tezos.ObjktcomNative.html">ObjktcomNative</a></li><li><a href="TokenFetch.html">TokenFetch</a></li></ul><h3>Interfaces</h3><ul><li><a href="TokenProvider.html">TokenProvider</a></li></ul><h3><a href="global.html">Global</a></h3>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-TokenFetchJS.html">TokenFetchJS</a></li></ul><h3>Namespaces</h3><ul><li><a href="TezosProviders.html">TezosProviders</a></li></ul><h3>Classes</h3><ul><li><a href="TezosProviders.FxhashNative.html">FxhashNative</a></li><li><a href="TezosProviders.ObjktcomNative.html">ObjktcomNative</a></li><li><a href="TezosProviders.TeiaRocks.html">TeiaRocks</a></li><li><a href="TezosProviders.TezTok.html">TezTok</a></li><li><a href="TokenFetcher.html">TokenFetcher</a></li></ul><h3>Interfaces</h3><ul><li><a href="TokenProvider.html">TokenProvider</a></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-FxhashNative_Selector_Compatibility.html">Tezos.FxhashNative Selectors</a></li></ul><h3><a href="global.html">Global</a></h3>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Wed Aug 31 2022 16:22:00 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Fri Sep 02 2022 11:14:52 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

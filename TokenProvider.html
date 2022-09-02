@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Module: TokenFetchJS</title>
+    <title>JSDoc: Interface: TokenProvider</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Module: TokenFetchJS</h1>
+    <h1 class="page-title">Interface: TokenProvider</h1>
 
     
 
@@ -28,6 +28,7 @@
 
 <header>
     
+        <h2>TokenProvider</h2>
         
     
 </header>
@@ -36,93 +37,13 @@
     <div class="container-overview">
     
         
+            <div class="description">A TokenProvider represents a source for token metadata. It can be any possible source, though generally
+speaking it would be an indexer of blockchain/marketplace/contract transaction metadata.
 
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        
-            
-<h4 class="name" id=".providers"><span class="type-signature">(static) </span>providers<span class="type-signature"></span></h4>
-
-
-
-
-<div class="description">
-    Dictionary of built-in token providers. Generally, token providers will be blockchain/smart contract indexers.
-</div>
-
-
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
+A TokenProvider can have its own set of constructor arguments, and may provide additional methods.</div>
         
 
         
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>Tezos</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Built-in <a href="TokenProvider.html">TokenProvider</a> class set for the Tezos blockchain.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
 
 
 <dl class="details">
@@ -160,10 +81,90 @@
     <dd class="tag-see">
         <ul>
             <li><a href="TezosProviders.html">TezosProviders</a></li>
-        
-            <li><a href="TokenProvider.html">TokenProvider</a></li>
         </ul>
     </dd>
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="key"><span class="type-signature"></span>key<span class="type-signature"> :String</span></h4>
+
+
+
+
+<div class="description">
+    Unique key used to identify provider instance.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">String</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -186,7 +187,7 @@
     
 
     
-    <h4 class="name" id=".factory"><span class="type-signature">(static) </span>factory<span class="signature">(tokenProviderSet)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="fetchTokens"><span class="type-signature"></span>fetchTokens<span class="signature">(tokenQuery)</span><span class="type-signature"> &rarr; {Array}</span></h4>
     
 
     
@@ -194,7 +195,7 @@
 
 
 <div class="description">
-    Factory method for constructing <a href="TokenFetcher.html">TokenFetcher</a> instances.
+    Fetch tokens and return a normalized set of <a href="global.html#tokenMetadata">tokenMetadata</a>.
 </div>
 
 
@@ -230,13 +231,13 @@
 
         <tr>
             
-                <td class="name"><code>tokenProviderSet</code></td>
+                <td class="name"><code>tokenQuery</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Array</span>
+<span class="param-type">Object</span>
 
 
             
@@ -246,7 +247,7 @@
 
             
 
-            <td class="description last">Set of instantiated token providers to fetch tokens from.</td>
+            <td class="description last">See <a href="global.html#tokenQuery">tokenQuery</a>.</td>
         </tr>
 
     
@@ -289,15 +290,6 @@
     
 
     
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="TokenFetcher.html">TokenFetcher</a></li>
-        
-            <li><a href="TokenProvider.html">TokenProvider</a></li>
-        </ul>
-    </dd>
-    
 
     
 </dl>
@@ -316,6 +308,28 @@
 
 
 
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Set of <a href="global.html#tokenMetadata">tokenMetadata</a>.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
 
 
 
